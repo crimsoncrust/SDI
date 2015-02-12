@@ -59,22 +59,21 @@ numberOfEvictions = prompt ("How many evictions does your perspective tenant hav
 
 //check to see if they put in 0 if they put in 0 run the console log saying they have no evictions
 
-if (numberOfEvictions <= 0 === true){
+if (numberOfEvictions == 0){
 	console.log ("Your applicant has no evictions and pass our recommendation for them to become a member.");
 }
 
 //if they have one eviction then we will need to do more verification first lets see if they have more then one.
 
-if (numberOfEvictions = 1 === true) {
+   else if (numberOfEvictions == 1) {
+
   console.log ("Your applicant has one eviction and we must verify the data inputed.  Please hold on for date input.");
   
- 	 if (numberOfEvictions > 1 === true){
-     console.log ("Your applicant has to many evictions and we do not recommend you rent to them.");
-
-
+  } else {
+ 	console.log ("Your applicant has to many evictions and we do not recommend you rent to them.");
 
 }
-}
+
 
 
 
