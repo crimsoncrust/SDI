@@ -1,6 +1,13 @@
 // JavaScript Document
 //Brandon C Varn
 //Expressions
+//2/15
+
+
+
+
+// global variables 
+
 
 var TransUnion;
 var Equifax;
@@ -10,8 +17,11 @@ var AverageThreeBureau;
 var MinimumScore
 var AverageScore
 var ScoreIsTrue = true;
-var EvictionConfirmationCheck
-var numberOfEvictions
+var EvictionConfirmationCheck;
+var numberOfEvictions;
+var ageOfEvictions;
+var date = new Date () .getFullYear();
+
 
 console.log ("Hello, we are going to verify if your tenant has sufficient credit and a good background to rent from you.")
 
@@ -66,19 +76,23 @@ if (numberOfEvictions == 0){
 //if they have one eviction then we will need to do more verification first lets see if they have more then one.
 
    else if (numberOfEvictions == 1) {
-
-  console.log ("Your applicant has one eviction and we must verify the data inputed.  Please hold on for date input.");
-  
+   console.log ("Your applicant has one eviction and we must verify the data inputed.  Please hold on for date input.");
+   ageOfEviction = prompt ("Please enter the 4 digit year the eviction happend on.");
+   
   } else {
  	console.log ("Your applicant has to many evictions and we do not recommend you rent to them.");
 
 }
 
+//if the evictions did equal 1 then we need to check it against our recommendations our recommendation is it be at least 10 years old with another calculation
 
+if (ageOfEviction <= (date - 10)) {
+    console.log ("The Eviction is old enough that we recommend you rent to this perspective tenant.");
 
+} else {
+	if (ageOfEviction >= (date-9)) { 
+   console.log ("The Eviction is to old and we do not recommend renting to this applicant.");
+   
+   }
 
-
-
-
-
-
+}
