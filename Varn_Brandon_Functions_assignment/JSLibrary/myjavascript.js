@@ -33,6 +33,33 @@ var myRandomLottoArray = [];
 
 }
 
+function randomLottoNumberPowerBall (){
+
+   
+   var myRandomPowerball = [];
+   
+   for (var i = 0; i < 6; i++){
+   
+   var randomNumber = Math.random() * (59 - 1) + 1;
+   
+   randomNumber = Math.floor(randomNumber);
+   myRandomPowerball [i] = randomNumber;
+	
+}
+
+	return myRandomPowerball;
+
+}
+
+
+function randomLottoPowerball (){
+
+var randomNumber = Math.random() * (35-1) +1;
+randomNumber = Math.floor(randomNumber);
+return randomNumber;
+
+}
+
 
 
 function numberFirstValidation (numberOne) {
