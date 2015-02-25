@@ -14,86 +14,115 @@ var mySixthNumber
 //functions
 
 
-function numberFirstValidation () {
+function randomNumberOneGenerator(){
 
-if (myFirstNumber === "") {
-   myFirstNumber = prompt ("You must enter a number");
+var myRandomLottoArray = [];
+
+	for (var i = 0; i <6; i++){
+
+// finding random number between 1 and 53
+	var randomNumber = Math.random() * (53 - 1) + 1;
+	
+	//return lowest integer rounded
+	randomNumber = Math.floor(randomNumber);
+	myRandomLottoArray [i] = randomNumber;
+}
+	return myRandomLottoArray;
+
+
 }
 
-console.log ("Your first number is " + myFirstNumber + ".");
+
+
+function numberFirstValidation (numberOne) {
+
+while (numberOne === "") {
+   numberOne = prompt ("You must enter a number");
+}
+
+console.log ("Your first number is " + numberOne + ".");
 
 }
 
-function numberSecondValidation () {
+function numberSecondValidation (numberTwo) {
 
-if (mySecondNumber === "") {
-   mySecondNumber = prompt ("You must enter a number");
+while (numberTwo === "") {
+   numberTwo = prompt ("You must enter a number");
 }
 
 	console.log ("Your second number is " + mySecondNumber + ".");
 
 }
 
-function numberThirdValidation () {
+function numberThirdValidation (numberThree) {
 
-if (myThirdNumber === "") {
-   myNumber = prompt ("You must enter a number");
+while (numberThree === "") {
+   numberThree = prompt ("You must enter a number");
 }
 
 	console.log ("Your third number is " + myThirdNumber + ".");
 
 }
 
-function numberFourthValidation () {
+function numberFourthValidation (numberFour) {
 
-if (myFourthNumber === "") {
-   myFourthNumber = prompt ("You must enter a number");
+while (numberFour === "") {
+   numberFour = prompt ("You must enter a number");
 }
 
 	console.log ("Your fourth number is " + myFourthNumber + ".");
 
 }
 
-function numberFifthValidation () {
+function numberFifthValidation (numberFive) {
 
-if (myFifthNumber === "") {
-   myFifthNumber = prompt ("You must enter a number");
+while (numberFive === "") {
+   numberFive = prompt ("You must enter a number");
 }
 
 	console.log ("Your fifth number is " + myFifthNumber + ".");
 }
 
-function numberSixthValidation () {
+function numberSixthValidation (numberSix) {
 
-if (mySixthNumber === "") {
-   mySixthNumber = prompt ("You must enter a number");
+while (numberSix === "") {
+   numberSix = prompt ("You must enter a number");
 }
 
-console.log ("Your second number is " + mySecondNumber + ".");
+console.log ("Your sixth number is " + mySecondNumber + ".");
 
 }
 
 //main code
 
 
+	//great them and tell them rules
+	
+console.log ("Ready to play the Florida Lottery! Get ready to enter 6 numbers between 1 and 53!");
+
+	//retrieve there numbers and validate them with a function displaying at the end of each input.  infinite loop placed as all 6 numbers are needed.
+
 var myFirstNumber = prompt ("Enter first number between 1 and 53.");
-numberFirstValidation();
+numberFirstValidation(myFirstNumber);
 
 var mySecondNumber = prompt ("Enter second number between 1 and 53.");
-numberSecondValidation();
+numberSecondValidation(mySecondNumber);
 
 var myThirdNumber = prompt ("Enter your third number between 1 and 53");
-numberThirdValidation();
+numberThirdValidation(myThirdNumber);
 
 var myFourthNumber = prompt ("Enter your fourth number between 1 and 53");
-numberFourthValidation ();
+numberFourthValidation (myFourthNumber);
 
 var myFifthNumber = prompt ("Enter your Fifth number between 1 and 53");
-numberFifthValidation ();
+numberFifthValidation (myFifthNumber);
 
 var mySixthNumber = prompt ("Enter your Sixth number between 1 and 54");
-numberSixthValidation ();
+numberSixthValidation (mySixthNumber);
+
+
+var myInputedNumberArray = [myFirstNumber, mySecondNumber, myThirdNumber, myFourthNumber, myFifthNumber, mySixthNumber];
 
 
 
-
+console.log ("Your six numbers are " + myInputedNumberArray + ".");
