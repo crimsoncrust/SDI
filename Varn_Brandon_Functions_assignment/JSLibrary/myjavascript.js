@@ -38,60 +38,18 @@ function numberFirstValidation (numberOne) {
 
 while (numberOne === "") {
    numberOne = prompt ("You must enter a number");
+   
+}   
+   if (numberOne > 53 && numberOne < 1){
+     numberOne = prompt ("You must enter a number BETWEEN 1 and 53!");
+   
 }
 
 console.log ("Your first number is " + numberOne + ".");
 
 }
 
-function numberSecondValidation (numberTwo) {
 
-while (numberTwo === "") {
-   numberTwo = prompt ("You must enter a number");
-}
-
-	console.log ("Your second number is " + mySecondNumber + ".");
-
-}
-
-function numberThirdValidation (numberThree) {
-
-while (numberThree === "") {
-   numberThree = prompt ("You must enter a number");
-}
-
-	console.log ("Your third number is " + myThirdNumber + ".");
-
-}
-
-function numberFourthValidation (numberFour) {
-
-while (numberFour === "") {
-   numberFour = prompt ("You must enter a number");
-}
-
-	console.log ("Your fourth number is " + myFourthNumber + ".");
-
-}
-
-function numberFifthValidation (numberFive) {
-
-while (numberFive === "") {
-   numberFive = prompt ("You must enter a number");
-}
-
-	console.log ("Your fifth number is " + myFifthNumber + ".");
-}
-
-function numberSixthValidation (numberSix) {
-
-while (numberSix === "") {
-   numberSix = prompt ("You must enter a number");
-}
-
-console.log ("Your sixth number is " + mySecondNumber + ".");
-
-}
 
 //main code
 
@@ -106,23 +64,23 @@ var myFirstNumber = prompt ("Enter first number between 1 and 53.");
 numberFirstValidation(myFirstNumber);
 
 var mySecondNumber = prompt ("Enter second number between 1 and 53.");
-numberSecondValidation(mySecondNumber);
+numberFirstValidation(mySecondNumber);
 
 var myThirdNumber = prompt ("Enter your third number between 1 and 53");
-numberThirdValidation(myThirdNumber);
+numberFirstValidation(myThirdNumber);
 
 var myFourthNumber = prompt ("Enter your fourth number between 1 and 53");
-numberFourthValidation (myFourthNumber);
+numberFirstValidation (myFourthNumber);
 
 var myFifthNumber = prompt ("Enter your Fifth number between 1 and 53");
-numberFifthValidation (myFifthNumber);
+numberFirstValidation (myFifthNumber);
 
 var mySixthNumber = prompt ("Enter your Sixth number between 1 and 54");
-numberSixthValidation (mySixthNumber);
+numberFirstValidation (mySixthNumber);
 
+//create a array to so we can bounce of lottery numbers to see if they win
 
 var myInputedNumberArray = [myFirstNumber, mySecondNumber, myThirdNumber, myFourthNumber, myFifthNumber, mySixthNumber];
-
 
 
 console.log ("Your six numbers are " + myInputedNumberArray + ".");
