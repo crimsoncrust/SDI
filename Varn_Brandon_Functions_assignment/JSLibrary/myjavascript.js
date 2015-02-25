@@ -10,11 +10,12 @@ var myThirdNumber
 var myFourthNumber 
 var myFifthNumber 
 var mySixthNumber 
+var powerballFLoridaLotto
 
 //functions
 
 
-function randomNumberOneGenerator(){
+function randomLottoNumberGenerator(){
 
 var myRandomLottoArray = [];
 
@@ -56,6 +57,19 @@ console.log ("Your first number is " + numberOne + ".");
 
 	//great them and tell them rules
 	
+var powerballFloridaLotto = prompt ("Type Powerball for powerball or FLorida for the Florida Lotto.");
+if (powerballFloridaLotto == "Florida" || powerballFloridaLotto == "Powerball"){
+	
+	console.log ("You entered " + powerballFloridaLotto + ".");
+	
+	} else {
+	
+	var powerballFloridaLotto = prompt ("Type Powerball for powerball or FLorida for the Florida Lotto. You did it wrong the first time this is your last chance!");
+
+}
+
+if (powerballFloridaLotto == "Florida"){
+
 console.log ("Ready to play the Florida Lottery! Get ready to enter 6 numbers between 1 and 53!");
 
 	//retrieve there numbers and validate them with a function displaying at the end of each input.  infinite loop placed as all 6 numbers are needed.
@@ -84,3 +98,28 @@ var myInputedNumberArray = [myFirstNumber, mySecondNumber, myThirdNumber, myFour
 
 
 console.log ("Your six numbers are " + myInputedNumberArray + ".");
+
+
+//Generate 6 lotto numbers
+
+console.log ("The winning numbers are bu du du duuuuu.");
+
+var myLottoArray = randomLottoNumberGenerator();
+
+console.log ("The numbers are " + myLottoArray + ".");
+
+console.log ("If " + myLottoArray + " are the same as your numbers. " + myInputedNumberArray + " then you are a winner.");
+
+}
+
+if (powerballFloridaLott == "Powerball"){
+
+
+
+
+
+
+
+
+
+}
