@@ -15,18 +15,6 @@ var powerballFLoridaLotto
 //functions
 
 
-var arr = []
-while(arr.length < 8){
-  var randomnumber=Math.ceil(Math.random()*100)
-  var found=false;
-  for(var i=0;i<arr.length;i++){
-	if(arr[i]==randomnumber){found=true;break}
-  }
-  if(!found)arr[arr.length]=randomnumber;
-}
-document.write(arr);
-
-
 
 function randomLottoNumberGenerator(){
 
@@ -35,13 +23,20 @@ while (myRandomLottoArray.length <  6){
 
 // finding random number between 1 and 53
 	var randomNumber = Math.floor (Math.random() * (53 - 1) + 1);
+	
+	//creating a true false statement
+	
 	var found = false;
+	
+	//looping numbers until they become true in order to not have duplicates breaking chain of loop once it is true
 	for (var i = 0; i <myRandomLottoArray.length; i++){
 		if (myRandomLottoArray[i]==randomNumber){found=true;break}
 		}
 		if(!found)myRandomLottoArray[myRandomLottoArray.length]= randomNumber;
 	
 }
+
+//returning value
 	return myRandomLottoArray;
 
 
