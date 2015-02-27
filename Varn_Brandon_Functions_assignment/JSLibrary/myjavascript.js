@@ -15,18 +15,32 @@ var powerballFLoridaLotto
 //functions
 
 
+var arr = []
+while(arr.length < 8){
+  var randomnumber=Math.ceil(Math.random()*100)
+  var found=false;
+  for(var i=0;i<arr.length;i++){
+	if(arr[i]==randomnumber){found=true;break}
+  }
+  if(!found)arr[arr.length]=randomnumber;
+}
+document.write(arr);
+
+
+
 function randomLottoNumberGenerator(){
 
 var myRandomLottoArray = [];
-
-	for (var i = 0; i <6; i++){
+while (myRandomLottoArray.length <  6){
 
 // finding random number between 1 and 53
-	var randomNumber = Math.random() * (53 - 1) + 1;
+	var randomNumber = Math.floor (Math.random() * (53 - 1) + 1);
+	var found = false;
+	for (var i = 0; i <myRandomLottoArray.length; i++){
+		if (myRandomLottoArray[i]==randomNumber){found=true;break}
+		}
+		if(!found)myRandomLottoArray[myRandomLottoArray.length]= randomNumber;
 	
-	//return lowest integer rounded
-	randomNumber = Math.floor(randomNumber);
-	myRandomLottoArray [i] = randomNumber;
 }
 	return myRandomLottoArray;
 
@@ -37,13 +51,14 @@ function randomLottoNumberPowerBall (){
 
    
    var myRandomPowerball = [];
+   while (myRandomPowerball.length <5){
    
-   for (var i = 0; i < 6; i++){
-   
-   var randomNumber = Math.random() * (59 - 1) + 1;
-   
-   randomNumber = Math.floor(randomNumber);
-   myRandomPowerball [i] = randomNumber;
+    var randomNumber = Math.floor (Math.random() * (59 - 1) + 1);
+    var found = false;
+   for (var i = 0; i < myRandomPowerball.length; i++){
+   		if (myRandomPowerball [i] == randomNumber){found=true;break}
+   		}
+   		if(!found)myRandomPowerball[myRandomPowerball.length]=randomNumber;
 	
 }
 
@@ -139,10 +154,15 @@ console.log ("If " + myLottoArray + " are the same as your numbers. " + myInpute
 
 }
 
-if (powerballFloridaLott == "Powerball"){
+if (powerballFloridaLotto == "Powerball"){
+
+console.log ("Hello and welcome to the Powerball!");
 
 
+var myPowerBall = randomLottoNumberPowerBall ();
+var myPowerBallPowerNumber = randomLottoPowerball ();
 
+console.log ("Your 5 powerball numbers are " + myPowerBall + ". " + "And your special powerball is " + myPowerBallPowerNumber + ".");
 
 
 
